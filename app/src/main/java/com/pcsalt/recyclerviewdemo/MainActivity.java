@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void result) {
+            PostAdapter postAdapter = new PostAdapter(activity, postList);
+            recyclerView.setAdapter(postAdapter);
             pd.dismiss();
         }
     }
